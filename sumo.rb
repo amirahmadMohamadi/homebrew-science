@@ -55,8 +55,8 @@ class Sumo < Formula
 
     system "make", "install"
 
-    # Copy tools/ to cellar. These contain some Python modules that have no setup.py.
-    prefix.install "tools"
+    # Copy tools/ and data/ to cellar. These contain some Python modules that have no setup.py.
+    prefix.install "tools", "data"
 
     # Basic tests, they are fast, so execute them always.
     system "unittest/src/sumo-unittest"
